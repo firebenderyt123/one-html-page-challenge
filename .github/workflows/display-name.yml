@@ -1,0 +1,19 @@
+name: Display Name
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  display-name:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Run Bash Script
+        run: |
+          #!/bin/bash
+          echo "My name is Oleksii Ponomarenko"
+          
